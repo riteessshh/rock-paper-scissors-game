@@ -1,0 +1,433 @@
+body {
+  height: 100vh;
+  background: linear-gradient(#1f3756 5%, #141539);
+  overflow: hidden;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.header {
+  display: flex;
+  width: 80%;
+  position: relative;
+  border: 3px solid #606e85;
+  padding: 10px;
+  margin: 30px auto;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.heading {
+  color: white;
+  font-size: 25px;
+  width: 24%;
+  margin: 0;
+  line-height: 0.8;
+  padding-left: 10px;
+  align-self: center;
+}
+
+.scoreboard {
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 22%;
+}
+.scoreboard p {
+  margin: 0;
+}
+.scoreboard .score-text {
+  font-size: 12px;
+  color: #2a46c0;
+}
+.scoreboard .score-no {
+  font-size: 2rem;
+  color: #3b4363;
+}
+
+.showcase {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  justify-content: center;
+}
+
+.background-shape {
+  text-align: center;
+  display: block;
+}
+
+.bg-triangle {
+  position: absolute;
+  left: 21%;
+  top: 40%;
+  width: 59%;
+}
+
+.rock {
+  background: linear-gradient(#dc2e4e, #dd405d);
+}
+
+.scissors {
+  background: linear-gradient(#ec9e0e, #eca922);
+}
+
+.paper {
+  background: linear-gradient(#4865f4, #5671f5);
+}
+
+.button {
+  flex-basis: 170px;
+  height: 154px;
+}
+
+.outer-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
+
+.inner-circle {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 -2px grey;
+  cursor: pointer;
+}
+
+.image {
+  position: relative;
+  top: 25%;
+  left: 25%;
+}
+
+.hide {
+  display: none;
+}
+
+.match {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.match .button {
+  height: auto;
+}
+.match p {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.result p {
+  display: inline;
+  align-self: center;
+}
+
+.result-text {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.play-again {
+  color: #141539;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 70px;
+  border-radius: 5px;
+  background: white;
+}
+
+.rules {
+  position: absolute;
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  bottom: 5%;
+}
+.rules p {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.winner {
+  box-shadow: 0 0 1px 10px #7da0cf, 0 0 1px 30px #a2bbdd, 0 0 1px 50px #c7d6ea;
+  border-radius: 50%;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 2;
+}
+#overlay .box h5 {
+  position: absolute;
+  bottom: 196px;
+  right: -55px;
+  margin: 0;
+}
+
+#overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+#overlay-text .close-btn {
+  top: 220px;
+  cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .header {
+    width: 55%;
+  }
+
+  .bg-triangle {
+    width: 32%;
+    top: 40%;
+    left: 34%;
+  }
+
+  .button {
+    flex-basis: 251px;
+    height: 170px;
+  }
+
+  .b1 {
+    position: relative;
+    left: 2%;
+  }
+
+  .b2 {
+    position: relative;
+    right: 2%;
+  }
+
+  .b3 {
+    position: relative;
+    top: 20px;
+  }
+
+  .result {
+    margin-top: 40px;
+  }
+
+  .rules {
+    width: 99%;
+    bottom: 2%;
+  }
+  .rules p {
+    position: relative;
+    left: 38%;
+    cursor: pointer;
+  }
+
+  #overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #overlay .box {
+    background: white;
+    width: 43%;
+    height: 63%;
+    border-radius: 10px;
+    padding-top: 40px;
+  }
+  #overlay .box h5 {
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    margin: 0;
+  }
+
+  #overlay-text .close-btn {
+    top: 8%;
+    left: 92%;
+  }
+}
+@media (min-width: 1010px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .scoreboard {
+    width: 20%;
+  }
+
+  .bg-triangle {
+    width: 29%;
+    top: 44%;
+    left: 36%;
+  }
+
+  .button {
+    flex-basis: 350px;
+    height: 200px;
+  }
+
+  .outer-circle {
+    height: 170px;
+    width: 170px;
+  }
+
+  .inner-circle {
+    height: 140px;
+    width: 140px;
+  }
+
+  .image {
+    width: 65px;
+  }
+
+  .result {
+    margin: 50px auto;
+    position: absolute;
+    top: 30%;
+  }
+
+  .rules p {
+    left: 40%;
+  }
+}
+@media (min-width: 1350px) {
+  .header {
+    width: 60%;
+  }
+
+  .heading {
+    width: 20%;
+    font-size: 40px;
+  }
+
+  .scoreboard {
+    width: 20%;
+  }
+  .scoreboard .score-text {
+    font-size: 24px;
+  }
+  .scoreboard .score-no {
+    font-size: 4rem;
+  }
+
+  .button {
+    flex-basis: 500px;
+    height: 230px;
+  }
+
+  .outer-circle {
+    height: 240px;
+    width: 240px;
+  }
+
+  .inner-circle {
+    height: 200px;
+    width: 200px;
+  }
+
+  .b1 {
+    position: relative;
+    left: 2%;
+  }
+
+  .b2 {
+    position: relative;
+    right: 2%;
+  }
+
+  .b3 {
+    position: relative;
+    top: 110px;
+  }
+
+  .bg-triangle {
+    width: 33%;
+    top: 39%;
+    left: 33%;
+  }
+
+  .match {
+    width: 90%;
+    margin: 200px auto auto;
+  }
+  .match p {
+    font-size: 1.5rem;
+  }
+
+  .result {
+    margin: 50px auto;
+    position: absolute;
+    top: 40%;
+  }
+
+  .result-text {
+    font-size: 4rem;
+  }
+
+  .rules {
+    width: 99%;
+  }
+  .rules p {
+    position: relative;
+    left: 41%;
+    cursor: pointer;
+  }
+
+  #overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #overlay .box {
+    background: white;
+    width: 35%;
+    height: 53%;
+    border-radius: 10px;
+  }
+  #overlay .box h5 {
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    margin: 0;
+  }
+
+  .image {
+    width: 100px;
+  }
+
+  #overlay-text .close-btn {
+    top: 8%;
+    left: 92%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

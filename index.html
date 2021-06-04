@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="heading">ROCK PAPER SCISSORS</h1>
+      <div class="scoreboard">
+        <p class="score-text">SCORE</p>
+        <p class="score-no">10</p>
+      </div>
+    </div>
+    <div class="middle">
+      <!-- choose -->
+      <div id="showcase" class="">
+        <div class="showcase">
+          <div class="background-shape">
+            <img class="bg-triangle" src="images/bg-triangle.svg" alt="">
+          </div>
+          <div class="button b1">
+            <div class="outer-circle rock">
+              <div class="inner-circle">
+                <img class="image" src="images/icon-rock.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="button b2">
+            <div class="outer-circle paper">
+              <div class="inner-circle">
+                <img class="image" src="images/icon-paper.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="button b3">
+            <div class="outer-circle scissors">
+              <div class="inner-circle">
+                <img class="image" src="images/icon-scissors.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- match -->
+      <div id="match" class="hide">
+        <div class="match">
+          <div class="user">
+            <div id="user_side" class="">
+              <div class="button">
+                <div class="userOutercircle outer-circle">
+                  <div class="usercircle inner-circle">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>You Picked</p>
+          </div>
+          <div class="computer">
+            <div id="comp_side" class="">
+              <div class="button">
+                <div class="compOutercircle outer-circle">
+                  <div class="compcircle inner-circle">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>The House Picked</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="result" class="hide">
+      <div class="result">
+        <p class="result-text">YOU LOSE</p>
+        <p style="cursor:pointer;" class="play-again">PLAY AGAIN</p>
+      </div>
+    </div>
+    <div class="rules">
+      <p id="rules-btn">RULES</p>
+      <div id="overlay" class="">
+        <div id="overlay-text" class="box">
+          <h5>RULES</h5>
+          <img id="overlay-text" src="images/image-rules.svg" alt="">
+          <img id="overlay-text" class="close-btn" src="images/icon-close.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
