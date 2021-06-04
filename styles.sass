@@ -57,7 +57,7 @@ body
 .bg-triangle
   position: absolute
   left: 21%
-  top: 40%
+  top: 274px
   width: 59%
 
 .rock
@@ -70,7 +70,7 @@ body
 // BUTTON -----------------
 .button
   flex-basis: 170px
-  height: 154px
+  height: 150px
 
 .outer-circle
   position: relative
@@ -183,7 +183,7 @@ body
     width: 55%
   .bg-triangle
     width: 32%
-    top: 40%
+    top: 280px
     left: 34%
   .button
     flex-basis: 251px
@@ -196,7 +196,13 @@ body
     right: 2%
   .b3
     position: relative
-    top: 20px
+    // top: 20px
+  .outer-circle
+    height: 140px
+    width: 140px
+  .inner-circle
+    height: 110px
+    width: 110px
   .result
     margin-top: 40px
   .rules
@@ -231,11 +237,15 @@ body
     width: 20%
   .bg-triangle
     width: 29%
-    top: 44%
+    top: 290px
     left: 36%
   .button
     flex-basis: 350px
     height: 200px
+  .b1
+    left: 3%
+  .b2
+    right: 3%
   .outer-circle
     height: 170px
     width: 170px
@@ -253,6 +263,8 @@ body
       left: 40%
 
 @media (min-width: 1350px)
+  .showcase
+    margin-top: 75px
   .header
     width: 60%
   .heading
@@ -267,38 +279,38 @@ body
 
   .button
     flex-basis: 500px
-    height: 230px
+    height: 210px
   .outer-circle
-    height: 240px
-    width: 240px
+    height: 220px
+    width: 220px
   .inner-circle
-    height: 200px
-    width: 200px
+    height: 190px
+    width: 190px
   .b1
     position: relative
-    left: 2%
+    left: 6%
   .b2
     position: relative
-    right: 2%
+    right: 6%
   .b3
     position: relative
-    top: 110px
+    top: 40px
 
   .bg-triangle
-    width: 33%
-    top: 39%
-    left: 33%
+    width: 28%
+    top: 330px
+    left: 36%
 
   .match
     width: 90%
-    margin: 200px auto auto
+    margin: 150px auto auto
     p
       font-size: 1.5rem
 
   .result
     margin: 50px auto
     position: absolute
-    top: 40%
+    top: 43%
   .result-text
     font-size: 4rem
 
@@ -326,3 +338,18 @@ body
     .close-btn
       top: 8%
       left: 92%
+
+@media (min-width: 1515px)
+  .header
+    width: 47%
+  .showcase
+    margin-top: 50px
+  .button
+    flex-basis: 510px
+    height: 200px
+  .bg-triangle
+    width: 24%
+    top: 310px
+    left: 38%
+  .result
+    top: 42%
