@@ -51,6 +51,7 @@ $(".rock").click(()=>{
     $("p.result-text").text("YOU LOSE")
     if (score > 0) {
       score--
+      $("p.score-no").text(score)
     }
     $("p.play-again").css("color","red")
 
@@ -116,6 +117,7 @@ $(".paper").click(()=>{
     $("p.result-text").text("YOU LOSE")
     if (score > 0) {
       score--
+      $("p.score-no").text(score)
     }
     $("p.play-again").css("color","red")
 
@@ -182,6 +184,7 @@ $(".scissors").click(()=>{
     $("p.result-text").text("YOU LOSE")
     if (score > 0) {
       score--
+      $("p.score-no").text(score)
     }
     $("p.play-again").css("color","red")
 
