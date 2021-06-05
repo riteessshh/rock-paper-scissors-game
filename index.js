@@ -49,6 +49,9 @@ $(".rock").click(()=>{
     $("div.compcircle").append(cimgTag)
 
     $("p.result-text").text("YOU LOSE")
+    if (score > 0) {
+      score--
+    }
     $("p.play-again").css("color","red")
 
   } else if (compSelection == "scissors") {
@@ -111,6 +114,9 @@ $(".paper").click(()=>{
     $("div.compcircle").append(cimgTag)
 
     $("p.result-text").text("YOU LOSE")
+    if (score > 0) {
+      score--
+    }
     $("p.play-again").css("color","red")
 
   } else if (compSelection == "rock") {
@@ -174,6 +180,9 @@ $(".scissors").click(()=>{
     $("div.compcircle").append(cimgTag)
 
     $("p.result-text").text("YOU LOSE")
+    if (score > 0) {
+      score--
+    }
     $("p.play-again").css("color","red")
 
   } else if (compSelection == "paper") {
